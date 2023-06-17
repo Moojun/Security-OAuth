@@ -1,0 +1,15 @@
+spring:
+  config:
+    import:
+      - classpath:/application-security.yml    # for OAuth2: google
+      - classpath:/application-database.yml
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create  # only validate or none
+    properties:
+      hibernate:
+        #        show_sql: true
+        format_sql: true
+    database: mysql
